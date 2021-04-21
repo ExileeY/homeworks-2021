@@ -1,4 +1,4 @@
-module ArrayModule
+module ArrayRefinements
   refine Array do
 
     def my_each
@@ -29,17 +29,9 @@ module ArrayModule
                 new_arr.push self[i] if yield self[i]
             end
         end
-        
+
         new_arr
     end   
 
   end
 end
-
-using ArrayModule
-
-arr = [1,2,3,4]
-
-p arr.my_each { |el| p el }
-p arr.my_map { |el|  el + 1 }
-p arr.my_select { |el| el.even? }
