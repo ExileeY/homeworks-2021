@@ -16,12 +16,3 @@ def format_logs(logs_str)
 
   formated_logs
 end
-
-logs = ''
-
-puts "Input logs or type \'end\' to continue:"
-while (text = gets) != "end\n"
-  logs += text
-end
-
-p format_logs(logs)

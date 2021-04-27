@@ -15,11 +15,3 @@ def calc_duration(actions)
 
   duration_results.empty? ? '0' : duration_results
 end
-
-actions = ''
-puts "Input logs or type \'end\' to continue:"
-while (text = gets) != "end\n"
-  actions += text
-end
-
-p calc_duration(actions)

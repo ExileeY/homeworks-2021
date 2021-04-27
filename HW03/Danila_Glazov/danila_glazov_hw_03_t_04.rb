@@ -7,6 +7,3 @@ def letter_counter(str)
 
   letters
 end
-
-p letter_counter('hel2!lo')
-p letter_counter('wicked .. !')
