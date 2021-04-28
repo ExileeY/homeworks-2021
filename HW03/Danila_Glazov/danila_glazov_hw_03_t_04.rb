@@ -1,5 +1,14 @@
 # frozen_string_literal: false
 
+DIGITS = /[^\d]/.freeze
+LETTERS = /[^a-zA-Z]/.freeze
+
+def string_info(str)
+  digits = str.gsub(DIGITS, '')
+  letters = str.gsub(LETTERS, '')
+  { letters: letters.length, digits: digits.length }
+end
+
 def letter_counter(str)
   letters = {}
 
