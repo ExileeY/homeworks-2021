@@ -32,6 +32,6 @@ while (text = gets) != "end\n"
 end
 p calc_duration(actions)
 
-puts 'Task 4 - Counting letters in a string'
-p letter_counter('hel2!lo')
-p letter_counter('wicked .. !')
+puts 'Task 4 - Counting letters and digits in a string'
+p string_info('hel2!lo')
+p string_info('wicked .. !')
