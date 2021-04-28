@@ -1,11 +1,11 @@
 # frozen_string_literal: false
 
-DIGITS = /[^\d]/.freeze
-LETTERS = /[^a-zA-Z]/.freeze
+NOT_DIGITS = /[^\d]/.freeze
+NOT_LETTERS = /[^a-zA-Z]/.freeze
 
 def string_info(str)
-  digits = str.gsub(DIGITS, '')
-  letters = str.gsub(LETTERS, '')
+  digits = str.gsub(NOT_DIGITS, '')
+  letters = str.gsub(NOT_LETTERS, '')
   { letters: letters.length, digits: digits.length }
 end
 

@@ -6,17 +6,12 @@ FROM = /^\d{1,2}\.\d{1}\.\d{1,3}\.\d{1,3}/.freeze
 TO = %r{"\w+\s(.*)\s\w+/\d{1}\.\d{1}}.freeze
 
 def format_logs(logs_str)
-  formated_logs = []
-
-  logs_str.split("\n").each do |log|
-    next unless log.match?(VALID_FORMAT)
-
+  logs_str.split("\n").select { |log| log.match?(VALID_FORMAT) }
+          .map do |log|
     data = log.match(DATA)
     from = log.match(FROM)
     to = log.match(TO)[1].upcase
 
-    formated_logs << "#{data} FROM: #{from} TO: #{to}"
+    "#{data} FROM: #{from} TO: #{to}"
   end
-
-  formated_logs
 end
