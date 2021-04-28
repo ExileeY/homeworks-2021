@@ -30,7 +30,7 @@ puts "Input logs or type \'end\' to continue:"
 while (text = gets) != "end\n"
   actions += text
 end
-p calc_duration(actions)
+p durations(actions)
 
 puts 'Task 4 - Counting letters and digits in a string'
 p string_info('hel2!lo')
