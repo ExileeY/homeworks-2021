@@ -1,7 +1,9 @@
 # frozen_string_literal: false
 
-require './mentor'
-require './student'
+require './lib/mentor'
+require './lib/student'
+require './lib/homework'
+require './lib/notification'
 
 # Module App describes student-mentor relationship
 module App
