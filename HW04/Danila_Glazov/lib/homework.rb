@@ -12,7 +12,6 @@ class Homework
     @status = ''
   end
 
-  # Refactor?
   def to_s
     "Title - #{@title}, Description - #{@description}"
   end
