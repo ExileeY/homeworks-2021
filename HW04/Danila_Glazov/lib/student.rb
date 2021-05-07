@@ -27,7 +27,7 @@ class Student
   end
 
   def add_answer!(homework, answer)
-    homework.answer = answer
+    homework.add_answer(answer)
   end
 
   def to_check!(homework)

@@ -31,12 +31,12 @@ class Mentor
   end
 
   def reject_to_work!(homework)
-    homework.status = 'rejected'
+    homework.rejected!
     @student.notification.add(homework.current_status)
   end
 
   def accept!(homework)
-    homework.status = 'accepted'
+    homework.accepted!
     @student.notification.add(homework.current_status)
   end
 end
