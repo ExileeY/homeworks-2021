@@ -12,6 +12,18 @@ class Homework
     @status = ''
   end
 
+  def add_answer(answer)
+    @answer = answer
+  end
+
+  def rejected!
+    @status = 'rejected'
+  end
+
+  def accepted!
+    @status = 'accepted'
+  end
+
   def to_s
     "Title - #{@title}, Description - #{@description}"
   end
