@@ -1,3 +1,7 @@
+# frozen_string_literal: false
+require './array_refinements'
+
+# Array class with refinements
 class ArrayWithRefinements < Array
   using ArrayRefinements
 

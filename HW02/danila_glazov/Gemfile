@@ -1,2 +1,4 @@
-gem 'rspec'
+# frozen_string_literal: false
+
 gem 'pry'
+gem 'rspec'
