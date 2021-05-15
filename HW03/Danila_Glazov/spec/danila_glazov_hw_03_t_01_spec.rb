@@ -34,6 +34,12 @@ describe 'find_error' do
     end
   end
 
+  context "when passed no arguments" do
+    it "raises an exeption" do
+      expect {find_error}.to raise_error(ArgumentError)
+    end
+  end
+
   context 'when argument in not a string' do
     it 'rises an exeption' do
       non_string_objects.each do |obj|
