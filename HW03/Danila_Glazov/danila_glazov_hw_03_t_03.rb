@@ -14,7 +14,8 @@ def durations(actions)
 end
 
 def calc_durations(actions)
-  raise TypeError, "Argument must be an Array" unless actions.kind_of? Array
+  raise TypeError, 'Argument must be an Array' unless actions.is_a? Array
+
   duration_results = []
   prev_datetime = ''
   actions.each do |action|

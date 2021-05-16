@@ -34,9 +34,9 @@ describe 'find_error' do
     end
   end
 
-  context "when passed no arguments" do
-    it "raises an exeption" do
-      expect {find_error}.to raise_error(ArgumentError)
+  context 'when passed no arguments' do
+    it 'raises an exeption' do
+      expect { find_error }.to raise_error(ArgumentError)
     end
   end
 
