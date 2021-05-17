@@ -43,7 +43,7 @@ describe ArrayRefinements do
 
     context 'when block passed' do
       it 'return a new array object' do
-        expect(test_array.my_map { |el| el + 1 }.equal?(test_array)).to eq(false)
+        expect(test_array.my_map { |el| el + 1 }.object_id == test_array.object_id).to eq(false)
       end
 
       it 'return a modifyed array' do
@@ -69,7 +69,7 @@ describe ArrayRefinements do
 
     context 'when block passed' do
       it 'return a new array object' do
-        expect(test_array.my_select(&:odd?).equal?(test_array)).to eq(false)
+        expect(test_array.my_select(&:odd?).object_id == test_array.object_id).to eq(false)
       end
 
       it 'return an array that satisfies the condition in the block' do
