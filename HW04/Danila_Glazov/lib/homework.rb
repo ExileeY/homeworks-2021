@@ -15,14 +15,6 @@ class Homework
     @answers[answer.student] = answer
   end
 
-  def rejected_statuse_of(student)
-    @answers[student].rejected!
-  end
-
-  def accepted_status_of(student)
-    @answers[student].accepted!
-  end
-
   def to_s
     "Title - #{@title}, Description - #{@description}"
   end
