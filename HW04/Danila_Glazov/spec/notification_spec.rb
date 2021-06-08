@@ -5,12 +5,20 @@ describe Notification do
   subject { described_class.new }
 
   describe '#add' do
-    it 'add new notification' do
-      expect{ subject.add('test_message') }.to change{ subject.messages }.from([]).to(['test_message'])
+    context 'when message passed' do
+      it 'add new notification' do
+        expect{ subject.add('test_message') }.to change{ subject.messages }.from([]).to(['test_message'])
+      end
+
+      it 'returns a new notifications array' do
+        expect(subject.add('test_message')).to eq(['test_message'])
+      end
     end
 
-    it 'returns a new notifications array' do
-      expect(subject.add('test_message')).to eq(['test_message'])
+    context 'when message is not passed' do
+      it 'raises an exaption' do
+        expect { subject.add }.to raise_error(ArgumentError)
+      end
     end
   end
 
