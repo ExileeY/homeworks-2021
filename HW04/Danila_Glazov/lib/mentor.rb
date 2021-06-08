@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+require_relative 'notification'
 
 # The Mentor class is used to create objects that can interact with student objects.
 class Mentor
@@ -39,5 +40,5 @@ class Mentor
     homework.answers[@student].accepted!
     @student.notification.add(homework.answer_status_of(@student))
   end
-  
+
 end

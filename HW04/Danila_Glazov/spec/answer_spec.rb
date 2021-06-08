@@ -1,5 +1,4 @@
 require 'student'
-require 'notification'
 require 'answer'
 
 describe Answer do

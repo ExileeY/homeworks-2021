@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+require_relative 'notification'
 
 # The Student class is used to create objects that can interact with mentor objects.
 class Student

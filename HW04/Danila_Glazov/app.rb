@@ -4,7 +4,6 @@ require './lib/answer'
 require './lib/mentor'
 require './lib/student'
 require './lib/homework'
-require './lib/notification'
 
 # Module App describes student-mentor relationship
 module App
