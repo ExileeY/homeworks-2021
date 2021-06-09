@@ -1,13 +1,14 @@
+# frozen_string_literal: false
+
 require 'notification'
 
 describe Notification do
-
   subject { described_class.new }
 
   describe '#add' do
     context 'when message passed' do
       it 'add new notification' do
-        expect{ subject.add('test_message') }.to change{ subject.messages }.from([]).to(['test_message'])
+        expect { subject.add('test_message') }.to change { subject.messages }.from([]).to(['test_message'])
       end
 
       it 'returns a new notifications array' do
@@ -25,7 +26,7 @@ describe Notification do
   describe '#check_all!' do
     it 'clear all notifications' do
       subject.add('test_message')
-      expect{ subject.check_all! }.to change{ subject.messages }.from(['test_message']).to([])
+      expect { subject.check_all! }.to change { subject.messages }.from(['test_message']).to([])
     end
 
     it 'returns an empty array' do

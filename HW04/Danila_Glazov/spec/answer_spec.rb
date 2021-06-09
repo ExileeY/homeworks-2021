@@ -1,3 +1,5 @@
+# frozen_string_literal: false
+
 require 'student'
 require 'answer'
 
@@ -38,15 +40,15 @@ describe Answer do
   describe '#to_s' do
     context 'when status is none' do
       it 'returns string representation of answer' do
-        expect(subject.to_s).to eq("Solution: new_solution - Status: none")
+        expect(subject.to_s).to eq('Solution: new_solution - Status: none')
       end
     end
 
     context 'when status is accepted or rejected' do
       it 'returns string representation of answer with status' do
-        [:accepted!, :rejected!].each do |method_name|
+        %i[accepted! rejected!].each do |method_name|
           subject.send(method_name)
-          expect(subject.to_s).to eq("Solution: new_solution - Status: #{method_name.to_s.gsub('!','')}")
+          expect(subject.to_s).to eq("Solution: new_solution - Status: #{method_name.to_s.gsub('!', '')}")
         end
       end
     end
