@@ -4,7 +4,7 @@ require_relative 'notification'
 # The Mentor class is used to create objects that can interact with student objects.
 class Mentor
   attr_reader :notification
-  attr_writer :student
+  attr_accessor :student
 
   def initialize(name: '', surname: '')
     @name = name
