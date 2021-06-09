@@ -1,6 +1,8 @@
+# frozen_string_literal: false
+
+# Class Answer is used to create new student answers
 class Answer
-  attr_reader :student
-  attr_reader :status, :solution
+  attr_reader :student, :status, :solution
 
   def initialize(student, solution)
     @student = student
@@ -19,5 +21,4 @@ class Answer
   def to_s
     "Solution: #{solution} - Status: #{status}"
   end
-
 end

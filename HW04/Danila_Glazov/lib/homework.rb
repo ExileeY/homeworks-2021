@@ -2,8 +2,7 @@
 
 # Class Homework is used to create new homeworks for students
 class Homework
-  attr_reader :title, :description
-  attr_reader :answers
+  attr_reader :title, :description, :answers
 
   def initialize(title: '', description: '')
     @title = title
